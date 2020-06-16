@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        tools:context=".main.MainActivity">
+
+    <EditText
+            android:id="@+id/search_request_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_request_field_hint"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/repository_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    <TextView
+            android:id="@+id/explanation_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:text="@string/explanation_msg"/>
+
+</LinearLayout>

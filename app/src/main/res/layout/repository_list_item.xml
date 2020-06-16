@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+
+    <TextView
+            android:id="@+id/repository_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+    <TextView
+            android:id="@+id/repository_lang"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_border_shape"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+</LinearLayout>

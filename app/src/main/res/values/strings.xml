@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GithubRepositorySearch</string>
+    <string name="explanation_msg">This is a test task for FBS inc.</string>
+    <string name="search_request_field_hint">Type in keywords to search for repositories</string>
+</resources>
