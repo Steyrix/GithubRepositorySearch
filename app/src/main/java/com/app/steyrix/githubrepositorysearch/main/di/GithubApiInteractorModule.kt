@@ -41,6 +41,7 @@ class GithubApiInteractorModule {
 
     @Module
     abstract class InteractorModule {
+        @Singleton
         @Binds
         abstract fun bindApiRepository(apiRepository: GithubApiRepository): ApiRepository
 
