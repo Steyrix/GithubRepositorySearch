@@ -20,6 +20,13 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
+    <FrameLayout
+            android:id="@+id/user_info_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
     <TextView
             android:id="@+id/explanation_field"
             android:layout_width="match_parent"
