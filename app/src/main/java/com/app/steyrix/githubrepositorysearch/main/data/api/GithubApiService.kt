@@ -1,7 +1,7 @@
 package com.app.steyrix.githubrepositorysearch.main.data.api
 
-import com.app.steyrix.githubrepositorysearch.main.data.model.RepositoryList
-import com.app.steyrix.githubrepositorysearch.main.data.model.UserInfo
+import com.app.steyrix.githubrepositorysearch.main.data.response.RepositoryList
+import com.app.steyrix.githubrepositorysearch.main.data.response.UserInfo
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

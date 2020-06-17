@@ -1,7 +1,7 @@
 package com.app.steyrix.githubrepositorysearch.main.data
 
 import android.util.Log
-import com.app.steyrix.githubrepositorysearch.main.data.model.ResultWrapper
+import com.app.steyrix.githubrepositorysearch.main.data.response.ResultWrapper
 import retrofit2.Response
 import java.io.IOException
 
@@ -31,7 +31,6 @@ open class SafeApiHandler {
 
         val response = call.invoke()
 
-        Log.e(TAG, response.body().toString())
         if (response.isSuccessful) {
             return ResultWrapper.Success(response.body()!!)
         }

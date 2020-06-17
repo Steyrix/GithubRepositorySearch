@@ -1,6 +1,6 @@
-package com.app.steyrix.githubrepositorysearch.main.data.model
+package com.app.steyrix.githubrepositorysearch.main.data.response
 
-object ModelUtils {
+object ResponseUtils {
     private const val NOT_FOUND_URL = "404"
 
     val notFoundUserInfo = UserInfo("Not found", NOT_FOUND_URL)

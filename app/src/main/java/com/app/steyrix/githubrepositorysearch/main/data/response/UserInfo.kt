@@ -1,4 +1,4 @@
-package com.app.steyrix.githubrepositorysearch.main.data.model
+package com.app.steyrix.githubrepositorysearch.main.data.response
 
 import com.google.gson.annotations.SerializedName
 

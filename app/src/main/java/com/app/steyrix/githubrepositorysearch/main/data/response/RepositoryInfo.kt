@@ -1,4 +1,4 @@
-package com.app.steyrix.githubrepositorysearch.main.data.model
+package com.app.steyrix.githubrepositorysearch.main.data.response
 
 data class RepositoryInfo(
     val name: String,
