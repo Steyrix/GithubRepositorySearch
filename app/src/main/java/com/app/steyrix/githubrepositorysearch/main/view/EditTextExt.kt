@@ -17,7 +17,7 @@ fun EditText.onTextChanged(onTextChanged: (String) -> Unit) {
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             timer?.cancel()
-            timer = object : CountDownTimer(500, 1500) {
+            timer = object : CountDownTimer(150, 1500) {
                 override fun onTick(millisUntilFinished: Long) {}
                 override fun onFinish() {
                     onTextChanged.invoke(s.toString())
