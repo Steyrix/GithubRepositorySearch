@@ -4,9 +4,7 @@ import com.app.steyrix.githubrepositorysearch.main.data.ApiRepository
 import com.app.steyrix.githubrepositorysearch.main.data.GithubApiRepository
 import com.app.steyrix.githubrepositorysearch.main.data.api.GithubApiService
 import com.app.steyrix.githubrepositorysearch.main.domain.ApiGetReposUseCase
-import com.app.steyrix.githubrepositorysearch.main.domain.ApiGetUserUseCase
 import com.app.steyrix.githubrepositorysearch.main.domain.GithubApiGetReposUseCase
-import com.app.steyrix.githubrepositorysearch.main.domain.GithubApiGetUserUseCase
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -44,9 +42,6 @@ class GithubApiInteractorModule {
         @Singleton
         @Binds
         abstract fun bindApiRepository(apiRepository: GithubApiRepository): ApiRepository
-
-        @Binds
-        abstract fun bindGetApiUserUseCase(apiGetUserUseCase: GithubApiGetUserUseCase): ApiGetUserUseCase
 
         @Binds
         abstract fun bindGetReposUseCase(apiGetReposUseCase: GithubApiGetReposUseCase): ApiGetReposUseCase

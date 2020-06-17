@@ -6,6 +6,9 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
+/**
+ * CoroutineBasedInteractor encapsulates coroutines' launching logic for use cases.
+ */
 open class CoroutineBasedInteractor {
     private val parentJob = Job()
 

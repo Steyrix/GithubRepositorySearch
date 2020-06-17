@@ -13,11 +13,6 @@ class GithubApiRepository @Inject constructor(
     private val apiService: GithubApiService
 ) : SafeApiHandler(), ApiRepository {
 
-    override suspend fun getUserInfo(userName: String): UserInfo {
-        val call = apiService.getUserInfo(userName)
-        return safeApiCall({ call }, ERROR_MSG) ?: ResponseUtils.notFoundUserInfo
-    }
-
     override suspend fun getReposByKeywords(keywords: String): MutableList<RepositoryInfo> {
         val call = apiService.getRepositoriesByKeywords(keywords)
         return safeApiCall({ call }, ERROR_MSG)?.items?.toMutableList() ?: mutableListOf()
