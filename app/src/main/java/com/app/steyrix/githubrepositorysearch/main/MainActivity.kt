@@ -3,7 +3,6 @@ package com.app.steyrix.githubrepositorysearch.main
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.FrameLayout
@@ -86,7 +85,6 @@ class MainActivity : AppCompatActivity() {
 
             val fragment = UserInfoFragment.newInstance().apply {
                 arguments = bundle
-                Log.d("Fragment", arguments.toString())
             }
 
             fragmentTransaction.replace(R.id.user_info_container, fragment)
