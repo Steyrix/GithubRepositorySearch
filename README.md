@@ -6,4 +6,4 @@ Android application that performs searching for GitHub repositories by set of ke
 * Displaying information about repository owner (Owner's name, avatar, description)
 
 # Example of working process:
-![Alt Text](example.gif)
+<img src="example.gif" width="360" height="640" />
