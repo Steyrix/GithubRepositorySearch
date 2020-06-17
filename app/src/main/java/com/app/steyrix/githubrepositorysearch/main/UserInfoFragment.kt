@@ -33,7 +33,6 @@ class UserInfoFragment : Fragment() {
 
         view.setOnKeyListener { _, _, keyEvent ->
             if (keyEvent.keyCode == KeyEvent.KEYCODE_BACK) {
-                activity?.supportFragmentManager?.beginTransaction()?.remove(this)?.commit()
                 activity?.onBackPressed()
             }
             false

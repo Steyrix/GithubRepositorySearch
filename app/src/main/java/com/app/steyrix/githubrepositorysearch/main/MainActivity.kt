@@ -20,7 +20,8 @@ import android.view.inputmethod.InputMethodManager
 
 class MainActivity : AppCompatActivity() {
 
-    @Inject lateinit var viewModel: MainViewModel
+    @Inject
+    lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         val repositoriesListView: RecyclerView = findViewById((R.id.repository_list))
 
         val repositoriesListAdapter = RepositoriesListAdapter(
-            mutableListOf(), ItemClickListener(this))
+            mutableListOf(), ItemClickListener(this)
+        )
 
         repositoriesListView.layoutManager = LinearLayoutManager(this)
         repositoriesListView.adapter = repositoriesListAdapter
@@ -55,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         super.onBackPressed()
     }
 
-    private fun deleteFragmentIfNeeded() : Boolean {
+    private fun deleteFragmentIfNeeded(): Boolean {
         val view: FrameLayout = findViewById(R.id.user_info_container)
 
         if (view.visibility != View.GONE) {
@@ -69,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    class ItemClickListener(private val context: MainActivity): View.OnClickListener {
+    class ItemClickListener(private val context: MainActivity) : View.OnClickListener {
 
         private var bundle = Bundle().apply {
             putString(BundleKeys.USER_NAME, ResponseUtils.notFoundUserInfo.login)
