@@ -1,11 +1,14 @@
 package com.app.steyrix.githubrepositorysearch.main.view
 
+import android.os.CountDownTimer
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 
 fun EditText.onTextChanged(onTextChanged: (String) -> Unit) {
     this.addTextChangedListener(object : TextWatcher {
+        var timer: CountDownTimer? = null
+
         override fun afterTextChanged(s: Editable?) {
         }
 
@@ -13,7 +16,13 @@ fun EditText.onTextChanged(onTextChanged: (String) -> Unit) {
         }
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            onTextChanged.invoke(s.toString())
+            timer?.cancel()
+            timer = object : CountDownTimer(500, 1500) {
+                override fun onTick(millisUntilFinished: Long) {}
+                override fun onFinish() {
+                    onTextChanged.invoke(s.toString())
+                }
+            }.start()
         }
     })
 }
