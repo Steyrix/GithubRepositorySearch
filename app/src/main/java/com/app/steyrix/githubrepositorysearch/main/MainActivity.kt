@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.steyrix.githubrepositorysearch.R
 import com.app.steyrix.githubrepositorysearch.core.GithubRepositorySearchApp
-import com.app.steyrix.githubrepositorysearch.main.data.model.RepositoryInfo
+import com.app.steyrix.githubrepositorysearch.main.data.response.RepositoryInfo
 import com.app.steyrix.githubrepositorysearch.main.view.MainViewModel
 import com.app.steyrix.githubrepositorysearch.main.view.RepositoriesListAdapter
 import com.app.steyrix.githubrepositorysearch.main.view.afterTextChanged

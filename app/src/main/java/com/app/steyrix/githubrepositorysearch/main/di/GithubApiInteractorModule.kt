@@ -3,8 +3,10 @@ package com.app.steyrix.githubrepositorysearch.main.di
 import com.app.steyrix.githubrepositorysearch.main.data.ApiRepository
 import com.app.steyrix.githubrepositorysearch.main.data.GithubApiRepository
 import com.app.steyrix.githubrepositorysearch.main.data.api.GithubApiService
-import com.app.steyrix.githubrepositorysearch.main.domain.ApiInteractor
-import com.app.steyrix.githubrepositorysearch.main.domain.GithubApiInteractor
+import com.app.steyrix.githubrepositorysearch.main.domain.ApiGetReposUseCase
+import com.app.steyrix.githubrepositorysearch.main.domain.ApiGetUserUseCase
+import com.app.steyrix.githubrepositorysearch.main.domain.GithubApiGetReposUseCase
+import com.app.steyrix.githubrepositorysearch.main.domain.GithubApiGetUserUseCase
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -40,9 +42,12 @@ class GithubApiInteractorModule {
     @Module
     abstract class InteractorModule {
         @Binds
-        abstract fun bindGithubApiRepository(apiRepository: GithubApiRepository): ApiRepository
+        abstract fun bindApiRepository(apiRepository: GithubApiRepository): ApiRepository
 
         @Binds
-        abstract fun bindGithubApiInteractor(apiInteractor: GithubApiInteractor): ApiInteractor
+        abstract fun bindGetApiUserUseCase(apiGetUserUseCase: GithubApiGetUserUseCase): ApiGetUserUseCase
+
+        @Binds
+        abstract fun bindGetReposUseCase(apiGetReposUseCase: GithubApiGetReposUseCase): ApiGetReposUseCase
     }
 }

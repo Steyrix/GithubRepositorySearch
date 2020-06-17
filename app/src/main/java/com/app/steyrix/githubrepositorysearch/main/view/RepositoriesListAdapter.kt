@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.steyrix.githubrepositorysearch.R
-import com.app.steyrix.githubrepositorysearch.main.data.model.RepositoryInfo
+import com.app.steyrix.githubrepositorysearch.main.data.response.RepositoryInfo
 
 class RepositoriesListAdapter(private var repositories: MutableList<RepositoryInfo>) :
     RecyclerView.Adapter<RepositoriesListAdapter.RepositoryViewHolder>() {
