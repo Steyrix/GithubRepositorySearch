@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity() {
         repositoriesListView.layoutManager = LinearLayoutManager(this)
         repositoriesListView.adapter = repositoriesListAdapter
 
+        searchFieldEditText.setOnClickListener {
+            deleteFragmentIfNeeded()
+        }
+
         val repositoriesObserver = Observer<MutableList<RepositoryInfo>> { list ->
             repositoriesListAdapter.setData(list)
         }
@@ -47,14 +51,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        if (deleteFragmentIfNeeded()) return
+        super.onBackPressed()
+    }
+
+    private fun deleteFragmentIfNeeded() : Boolean {
         val view: FrameLayout = findViewById(R.id.user_info_container)
 
         if (view.visibility != View.GONE) {
+            supportFragmentManager.findFragmentById(R.id.user_info_container)?.let {
+                supportFragmentManager.beginTransaction().remove(it).commit()
+            }
             view.visibility = View.GONE
-            return
+            return true
         }
 
-        super.onBackPressed()
+        return false
     }
 
     class ItemClickListener(private val context: MainActivity): View.OnClickListener {
