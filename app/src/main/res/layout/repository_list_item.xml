@@ -17,9 +17,10 @@
 
     <TextView
             android:id="@+id/repository_lang"
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:background="@drawable/round_border_shape"
+            android:textSize="12sp"
             android:textColor="@color/colorPrimary"
             android:textAlignment="center"
             android:ellipsize="end"
